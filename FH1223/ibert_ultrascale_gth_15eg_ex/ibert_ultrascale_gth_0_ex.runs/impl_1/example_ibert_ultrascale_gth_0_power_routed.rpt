@@ -1,0 +1,245 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date             : Wed Nov  2 18:05:56 2022
+| Host             : DESKTOP-AOVMD3L running 64-bit major release  (build 9200)
+| Command          : report_power -file example_ibert_ultrascale_gth_0_power_routed.rpt -pb example_ibert_ultrascale_gth_0_power_summary_routed.pb -rpx example_ibert_ultrascale_gth_0_power_routed.rpx
+| Design           : example_ibert_ultrascale_gth_0
+| Device           : xczu15eg-ffvb1156-2-i
+| Design State     : routed
+| Grade            : industrial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 3.102        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 2.355        |
+| Device Static (W)        | 0.747        |
+| Effective TJA (C/W)      | 1.0          |
+| Max Ambient (C)          | 96.9         |
+| Junction Temperature (C) | 28.1         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.226 |       69 |       --- |             --- |
+| CLB Logic                |     0.070 |    60783 |       --- |             --- |
+|   LUT as Logic           |     0.048 |    16789 |    341280 |            4.92 |
+|   Register               |     0.009 |    35308 |    682560 |            5.17 |
+|   LUT as Distributed RAM |     0.006 |      288 |    184320 |            0.16 |
+|   LUT as Shift Register  |     0.006 |      280 |    184320 |            0.15 |
+|   CARRY8                 |    <0.001 |      321 |     42660 |            0.75 |
+|   Others                 |     0.000 |     2465 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |     1304 |    341280 |            0.38 |
+| Signals                  |     0.081 |    49555 |       --- |             --- |
+| Block RAM                |     0.027 |       40 |       744 |            5.38 |
+| MMCM                     |     0.098 |        0 |       --- |             --- |
+| DSPs                     |     0.009 |       16 |      3528 |            0.45 |
+| I/O                      |     0.014 |        2 |       328 |            0.61 |
+| GTH                      |     1.831 |        8 |        24 |           33.33 |
+| Static Power             |     0.747 |          |           |                 |
+| Total                    |     3.102 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint          |       0.850 |     0.995 |       0.757 |      0.238 |       NA    | Unspecified | NA         |
+| Vccint_io       |       0.850 |     0.038 |       0.002 |      0.036 |       NA    | Unspecified | NA         |
+| Vccbram         |       0.850 |     0.005 |       0.001 |      0.004 |       NA    | Unspecified | NA         |
+| Vccaux          |       1.800 |     0.278 |       0.054 |      0.224 |       NA    | Unspecified | NA         |
+| Vccaux_io       |       1.800 |     0.039 |       0.007 |      0.033 |       NA    | Unspecified | NA         |
+| Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18          |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15          |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135         |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP     |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSINTLP     |       0.850 |     0.005 |       0.000 |      0.005 |       NA    | Unspecified | NA         |
+| VPS_MGTRAVCC    |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSINTFP_DDR |       0.850 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSPLL       |       1.200 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| VPS_MGTRAVTT    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSDDR_504  |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSAUX       |       1.800 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| VCC_PSBATT      |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSDDR_PLL   |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO0_500  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO1_501  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO2_502  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCCO_PSIO3_503  |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| VCC_PSADC       |       1.800 |     0.002 |       0.000 |      0.002 |       NA    | Unspecified | NA         |
+| MGTAVcc         |       0.900 |     0.616 |       0.609 |      0.007 |       NA    | Unspecified | NA         |
+| MGTAVtt         |       1.200 |     0.853 |       0.839 |      0.014 |       NA    | Unspecified | NA         |
+| MGTVccaux       |       1.800 |     0.024 |       0.024 |      0.000 |       NA    | Unspecified | NA         |
++-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.0                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 1.5                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
+| Clock                                                                                               | Domain                                                               | Constraint (ns) |
++-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
+| D_CLK                                                                                               | gth_sysclkp_i                                                        |             5.0 |
+| USE_DIVIDER.dclk_mmcm                                                                               | dbg_hub/inst/BSCANID.u_xsdbm_id/USE_DIVIDER.dclk_mmcm                |            10.0 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/INTERNAL_TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/in0    |            50.0 |
+| gth_refclk0_3                                                                                       | gth_refclk0p_i[0]                                                    |            10.0 |
+| gth_refclk1_3                                                                                       | gth_refclk1p_i[0]                                                    |            10.0 |
+| qpll0outclk_o                                                                                       | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/qpll0outclk_o             |             0.2 |
+| qpll0outclk_o_1                                                                                     | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/qpll0outclk_o             |             0.2 |
+| qpll0outrefclk_o                                                                                    | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/qpll0outrefclk_o          |            10.0 |
+| qpll0outrefclk_o_1                                                                                  | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/qpll0outrefclk_o          |            10.0 |
+| refclkoutmonitor0_com                                                                               | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/refclkoutmonitor0_com     |            10.0 |
+| refclkoutmonitor0_com_1                                                                             | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/refclkoutmonitor0_com     |            10.0 |
+| rxoutclk_o                                                                                          | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/rxoutclk_o              |             4.0 |
+| rxoutclk_o[0]                                                                                       | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[0]  |             4.0 |
+| rxoutclk_o[1]                                                                                       | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[1]  |             4.0 |
+| rxoutclk_o[2]                                                                                       | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[2]  |             4.0 |
+| rxoutclk_o[3]                                                                                       | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk_o[3]  |             4.0 |
+| rxoutclk_o[4]                                                                                       | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/u_clocking/rxusrclk_o[0]  |             4.0 |
+| rxoutclk_o[5]                                                                                       | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/u_clocking/rxusrclk_o[1]  |             4.0 |
+| rxoutclk_o[6]                                                                                       | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/u_clocking/rxusrclk_o[2]  |             4.0 |
+| rxoutclk_o[7]                                                                                       | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/u_clocking/rxusrclk_o[3]  |             4.0 |
+| rxoutclk_o_1                                                                                        | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/rxoutclk_o              |             4.0 |
+| rxoutclk_o_2                                                                                        | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/rxoutclk_o              |             4.0 |
+| rxoutclk_o_3                                                                                        | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/rxoutclk_o              |             4.0 |
+| rxoutclk_o_4                                                                                        | u_ibert_gth_core/inst/QUAD[1].u_q/CH[0].u_ch/rxoutclk_o              |             4.0 |
+| rxoutclk_o_5                                                                                        | u_ibert_gth_core/inst/QUAD[1].u_q/CH[1].u_ch/rxoutclk_o              |             4.0 |
+| rxoutclk_o_6                                                                                        | u_ibert_gth_core/inst/QUAD[1].u_q/CH[2].u_ch/rxoutclk_o              |             4.0 |
+| rxoutclk_o_7                                                                                        | u_ibert_gth_core/inst/QUAD[1].u_q/CH[3].u_ch/rxoutclk_o              |             4.0 |
+| rxusrclk2_i[0]                                                                                      | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[0] |             4.0 |
+| rxusrclk2_i[0]_1                                                                                    | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/u_clocking/rxusrclk2_o[0] |             4.0 |
+| rxusrclk2_i[1]                                                                                      | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[1] |             4.0 |
+| rxusrclk2_i[1]_1                                                                                    | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/u_clocking/rxusrclk2_o[1] |             4.0 |
+| rxusrclk2_i[2]                                                                                      | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[2] |             4.0 |
+| rxusrclk2_i[2]_1                                                                                    | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/u_clocking/rxusrclk2_o[2] |             4.0 |
+| rxusrclk2_i__0[3]                                                                                   | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/rxusrclk2_o[3] |             4.0 |
+| rxusrclk2_i__0[3]_1                                                                                 | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/u_clocking/rxusrclk2_o[3] |             4.0 |
+| txoutclk_o                                                                                          | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/txoutclk_o              |             4.0 |
+| txoutclk_o[0]                                                                                       | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[0]  |             4.0 |
+| txoutclk_o[1]                                                                                       | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[1]  |             4.0 |
+| txoutclk_o[2]                                                                                       | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[2]  |             4.0 |
+| txoutclk_o[3]                                                                                       | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk_o[3]  |             4.0 |
+| txoutclk_o[4]                                                                                       | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/u_clocking/txusrclk_o[0]  |             4.0 |
+| txoutclk_o[5]                                                                                       | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/u_clocking/txusrclk_o[1]  |             4.0 |
+| txoutclk_o[6]                                                                                       | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/u_clocking/txusrclk_o[2]  |             4.0 |
+| txoutclk_o[7]                                                                                       | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/u_clocking/txusrclk_o[3]  |             4.0 |
+| txoutclk_o_1                                                                                        | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/txoutclk_o              |             4.0 |
+| txoutclk_o_2                                                                                        | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/txoutclk_o              |             4.0 |
+| txoutclk_o_3                                                                                        | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/txoutclk_o              |             4.0 |
+| txoutclk_o_4                                                                                        | u_ibert_gth_core/inst/QUAD[1].u_q/CH[0].u_ch/txoutclk_o              |             4.0 |
+| txoutclk_o_5                                                                                        | u_ibert_gth_core/inst/QUAD[1].u_q/CH[1].u_ch/txoutclk_o              |             4.0 |
+| txoutclk_o_6                                                                                        | u_ibert_gth_core/inst/QUAD[1].u_q/CH[2].u_ch/txoutclk_o              |             4.0 |
+| txoutclk_o_7                                                                                        | u_ibert_gth_core/inst/QUAD[1].u_q/CH[3].u_ch/txoutclk_o              |             4.0 |
+| txusrclk2_i[0]                                                                                      | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[0] |             4.0 |
+| txusrclk2_i[0]_1                                                                                    | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/u_clocking/txusrclk2_o[0] |             4.0 |
+| txusrclk2_i[1]                                                                                      | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[1] |             4.0 |
+| txusrclk2_i[1]_1                                                                                    | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/u_clocking/txusrclk2_o[1] |             4.0 |
+| txusrclk2_i[2]                                                                                      | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[2] |             4.0 |
+| txusrclk2_i[2]_1                                                                                    | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/u_clocking/txusrclk2_o[2] |             4.0 |
+| txusrclk2_i__0[3]                                                                                   | u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_clocking/txusrclk2_o[3] |             4.0 |
+| txusrclk2_i__0[3]_1                                                                                 | u_ibert_gth_core/inst/QUAD[1].u_q/u_common/u_clocking/txusrclk2_o[3] |             4.0 |
+| u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/u_gthe4_channel/DMONITOROUTCLK                         | u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/dmonitorclk             |             4.0 |
+| u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/u_gthe4_channel/DMONITOROUTCLK                         | u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/dmonitorclk             |             4.0 |
+| u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/u_gthe4_channel/DMONITOROUTCLK                         | u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/dmonitorclk             |             4.0 |
+| u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/u_gthe4_channel/DMONITOROUTCLK                         | u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/dmonitorclk             |             4.0 |
+| u_ibert_gth_core/inst/QUAD[1].u_q/CH[0].u_ch/u_gthe4_channel/DMONITOROUTCLK                         | u_ibert_gth_core/inst/QUAD[1].u_q/CH[0].u_ch/dmonitorclk             |             4.0 |
+| u_ibert_gth_core/inst/QUAD[1].u_q/CH[1].u_ch/u_gthe4_channel/DMONITOROUTCLK                         | u_ibert_gth_core/inst/QUAD[1].u_q/CH[1].u_ch/dmonitorclk             |             4.0 |
+| u_ibert_gth_core/inst/QUAD[1].u_q/CH[2].u_ch/u_gthe4_channel/DMONITOROUTCLK                         | u_ibert_gth_core/inst/QUAD[1].u_q/CH[2].u_ch/dmonitorclk             |             4.0 |
+| u_ibert_gth_core/inst/QUAD[1].u_q/CH[3].u_ch/u_gthe4_channel/DMONITOROUTCLK                         | u_ibert_gth_core/inst/QUAD[1].u_q/CH[3].u_ch/dmonitorclk             |             4.0 |
++-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------------------+-----------+
+| Name                           | Power (W) |
++--------------------------------+-----------+
+| example_ibert_ultrascale_gth_0 |     2.355 |
+|   dbg_hub                      |     0.101 |
+|     inst                       |     0.101 |
+|       BSCANID.u_xsdbm_id       |     0.101 |
+|   u_ibert_gth_core             |     2.241 |
+|     inst                       |     2.241 |
+|       QUAD[0].u_q              |     1.122 |
+|       QUAD[1].u_q              |     1.119 |
+|   u_ibufgds                    |     0.002 |
++--------------------------------+-----------+
+
+

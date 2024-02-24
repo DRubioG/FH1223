@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Nov  3 10:39:40 2022
+# Process ID: 32108
+# Current directory: b:/ku042_prj/ibert_ultrascale_gth_0_ex/ibert_ultrascale_gth_0_ex.runs/synth_1
+# Command line: vivado.exe -log example_ibert_ultrascale_gth_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source example_ibert_ultrascale_gth_0.tcl
+# Log file: b:/ku042_prj/ibert_ultrascale_gth_0_ex/ibert_ultrascale_gth_0_ex.runs/synth_1/example_ibert_ultrascale_gth_0.vds
+# Journal file: b:/ku042_prj/ibert_ultrascale_gth_0_ex/ibert_ultrascale_gth_0_ex.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source example_ibert_ultrascale_gth_0.tcl -notrace
