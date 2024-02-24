@@ -1,0 +1,420 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Thu Nov  3 09:46:24 2022
+| Host         : DESKTOP-AOVMD3L running 64-bit major release  (build 9200)
+| Command      : report_methodology -file example_ibert_ultrascale_gth_0_methodology_drc_routed.rpt -pb example_ibert_ultrascale_gth_0_methodology_drc_routed.pb -rpx example_ibert_ultrascale_gth_0_methodology_drc_routed.rpx
+| Design       : example_ibert_ultrascale_gth_0
+| Device       : xczu7ev-ffvc1156-2-i
+| Speed File   : -2
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 45
++-----------+----------+--------------------------------------------------+------------+
+| Rule      | Severity | Description                                      | Violations |
++-----------+----------+--------------------------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert                     | 41         |
+| TIMING-9  | Warning  | Unknown CDC Logic                                | 1          |
+| TIMING-10 | Warning  | Missing property on synchronizer                 | 1          |
+| CLKC-47   | Advisory | GTHE4_COMMON REFCLKMONITOR pin should drive BUFG | 2          |
++-----------+----------+--------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_sel[0]_INST_0, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[10]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[11]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[12]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[13]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[14]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[15]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[6]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[7]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[8]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[9]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#7 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#8 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_meta_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#9 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_meta_i_1__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#10 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_meta_i_1__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#11 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_meta_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#12 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_meta_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#13 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_RXCDR_RESET/u_gthe4_channel_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[0]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[1]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[2]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[3]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[5]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_PATTERN_HANDLER/chk40.patchk40/link_reg/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[4]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/U_PATTERN_HANDLER/chk40.patchk40/link_down_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#14 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_meta_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[0].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#15 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#16 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#17 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_meta_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#18 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_meta_i_1__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#19 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_meta_i_1__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#20 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_meta_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#21 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_meta_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#22 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_RXCDR_RESET/u_gthe4_channel_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[0]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[1]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[2]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[3]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[5]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_PATTERN_HANDLER/chk40.patchk40/link_reg/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[4]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/U_PATTERN_HANDLER/chk40.patchk40/link_down_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#23 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_meta_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[1].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#24 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#25 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#26 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_meta_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#27 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_meta_i_1__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#28 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_meta_i_1__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#29 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_meta_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#30 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_meta_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#31 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_RXCDR_RESET/u_gthe4_channel_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[0]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[1]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[2]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[3]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[5]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_PATTERN_HANDLER/chk40.patchk40/link_reg/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[4]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/U_PATTERN_HANDLER/chk40.patchk40/link_down_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#32 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_meta_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[2].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#33 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].rrst_inst/ngwrdrst.grst.g7serrst.rd_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[0]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[1]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.rd_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#34 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gwrrd_rst_sync_stage[2].wrst_inst/ngwrdrst.grst.g7serrst.wr_rst_reg[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[0]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[1]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_DMON_LUTRAM_FIFO/lutram_fifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.wr_rst_reg_reg[2]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#35 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_meta_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#36 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_meta_i_1__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#37 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_meta_i_1__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#38 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_meta_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#39 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_meta_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RESET_CONTROLLER/gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#40 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_RXCDR_RESET/u_gthe4_channel_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[0]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[1]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[2]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[3]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[5]/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_PATTERN_HANDLER/chk40.patchk40/link_reg/CLR,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_PATTERN_HANDLER/chk40.patchk40/err_cnt_reg[4]/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/U_PATTERN_HANDLER/chk40.patchk40/link_down_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#41 Warning
+LUT drives async reset alert  
+LUT cell u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_meta_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_meta_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_out_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_sync1_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_sync2_reg/PRE,
+u_ibert_gth_core/inst/QUAD[0].u_q/CH[3].u_ch/enable_cal_block.cpll_cal_inst_i/reset_synchronizer_resetin_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
+CLKC-47#1 Advisory
+GTHE4_COMMON REFCLKMONITOR pin should drive BUFG  
+The GTHE4_COMMON cell u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_gthe4_common pin u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_gthe4_common/REFCLKOUTMONITOR0 should be driving a global clock buffer such as BUFGCE, BUFGCE_DIV, or BUFGCTRL, but not a BUFG_GT. Instead, it is driving a FDRE cell u_ibert_gth_core/inst/QUAD[0].u_q/u_common/U_COMMON_REGS/reg_40e/I_EN_STAT_EQ1.U_STAT/xsdb_reg_reg[3] (and 1 other loads).
+Related violations: <none>
+
+CLKC-47#2 Advisory
+GTHE4_COMMON REFCLKMONITOR pin should drive BUFG  
+The GTHE4_COMMON cell u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_gthe4_common pin u_ibert_gth_core/inst/QUAD[0].u_q/u_common/u_gthe4_common/REFCLKOUTMONITOR1 should be driving a global clock buffer such as BUFGCE, BUFGCE_DIV, or BUFGCTRL, but not a BUFG_GT. Instead, it is driving a FDRE cell u_ibert_gth_core/inst/QUAD[0].u_q/u_common/U_COMMON_REGS/reg_40e/I_EN_STAT_EQ1.U_STAT/xsdb_reg_reg[4] (and 1 other loads).
+Related violations: <none>
+
+

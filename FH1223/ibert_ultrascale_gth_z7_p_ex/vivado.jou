@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Nov  3 09:35:32 2022
+# Process ID: 45856
+# Current directory: b:/Z7_P/FH1159_Z7_P_demo/vivado/fh1159_z9es1_demo/ibert_ultrascale_gth_0_ex
+# Command line: vivado.exe -notrace -source b:/Z7_P/FH1159_Z7_P_demo/vivado/fh1159_z9es1_demo/fh1159_z9es1_demo/fl1159_demo.srcs/sources_1/ip/ibert_ultrascale_gth_0/ibert_ultrascale_gth_0_ex.tcl
+# Log file: b:/Z7_P/FH1159_Z7_P_demo/vivado/fh1159_z9es1_demo/ibert_ultrascale_gth_0_ex/vivado.log
+# Journal file: b:/Z7_P/FH1159_Z7_P_demo/vivado/fh1159_z9es1_demo/ibert_ultrascale_gth_0_ex\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source b:/Z7_P/FH1159_Z7_P_demo/vivado/fh1159_z9es1_demo/fh1159_z9es1_demo/fl1159_demo.srcs/sources_1/ip/ibert_ultrascale_gth_0/ibert_ultrascale_gth_0_ex.tcl -notrace
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
